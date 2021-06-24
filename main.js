@@ -1,3 +1,5 @@
+"use strict";
+
 //generates a integer between 0 and the given number inclusively
 function random(num) {
     return Math.floor(Math.random() * (num + 1));
@@ -18,7 +20,7 @@ function computerPlay() {
 
 //takes both player and computer choices and returns the result of a single round
 function playRound(playerSelection, computerSelection) {
-
+    //change player selection input
     playerSelection = window.prompt("Insert your choice:");
     computerSelection = computerPlay();
 
@@ -29,13 +31,4 @@ function playRound(playerSelection, computerSelection) {
     } else {
         return `You Win! ${playerSelection.toLowerCase()} beats ${computerSelection}`;
     }
-}
-
-//create 5 rounds of the game
-function game() {
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
 }

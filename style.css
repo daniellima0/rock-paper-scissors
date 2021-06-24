@@ -1,0 +1,67 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #eee;
+}
+
+#container {
+    /* background-color: grey; */
+    margin: auto;
+    position: absolute;
+    top: 12vh;
+    right: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+}
+
+#title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 0.2rem solid black;
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.player-name {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem auto auto auto;
+    background-color: #bbb;
+    width: max-content;
+    padding: 0.15rem 0.8rem;
+    border-radius: 5%;
+}
+
+#computer-buttons {
+    text-align: center;
+    margin: 2rem auto 16rem auto;
+}
+
+#user-buttons {
+    text-align: center;
+}
+
+.computer-button {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.user-button {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.computer-button-symbol {
+    transform: rotate(180deg);
+    width: 6rem;
+    height: auto;
+}
+
+.user-button-symbol {
+    width: 6rem;
+    height: auto;
+}
