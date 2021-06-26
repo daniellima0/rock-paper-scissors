@@ -39,27 +39,34 @@ function playRound(playerChoice) {
 }
 
 function showResult(result) {
-    const para = document.createElement('p');
-    para.textContent = result;
-    para.style.fontSize = '1.8rem';
-    para.style.textAlign = 'center';
-    para.style.position = 'absolute';
-    para.style.top = '54%';
-    para.style.right = '0';
-    para.style.left = '0';
-    para.style.width = 'max-content';
-    para.style.height = 'max-content';
-    para.style.margin = 'auto';
     const container = document.querySelector('#container');
-    container.appendChild(para);
+    const oldParagraph = container.querySelector("#resultParagraph");
+    oldParagraph && oldParagraph.remove();
+    const paragraph = document.createElement('p');
+    paragraph.id = "resultParagraph";
+    paragraph.textContent = result;
+    paragraph.style.fontSize = '1.8rem';
+    paragraph.style.textAlign = 'center';
+    paragraph.style.position = 'absolute';
+    paragraph.style.top = '54%';
+    paragraph.style.right = '0';
+    paragraph.style.left = '0';
+    paragraph.style.width = 'max-content';
+    paragraph.style.height = 'max-content';
+    paragraph.style.margin = 'auto';
+    container.appendChild(paragraph);
 }
 
 function showUserChoice(choice) {
 
     const container = document.querySelector('#container');
+    // Why querySelectorAll doesn't work?
+    const oldSymbol = container.querySelector(".resultSymbol");
+    oldSymbol && oldSymbol.remove();
 
     if (choice == 'rock') {
         const rockSymbol = document.createElement('img');
+        rockSymbol.className = "resultSymbol";
         rockSymbol.src = "rock.png";
         rockSymbol.style.width = '6rem';
         rockSymbol.style.position = 'absolute';
@@ -69,6 +76,7 @@ function showUserChoice(choice) {
         container.append(rockSymbol);
     } else if (choice == 'paper') {
         const paperSymbol = document.createElement('img');
+        paperSymbol.className = "resultSymbol";
         paperSymbol.src = "paper.png";
         paperSymbol.style.width = '6rem';
         paperSymbol.style.position = 'absolute';
@@ -78,6 +86,7 @@ function showUserChoice(choice) {
         container.append(paperSymbol);
     } else if (choice == 'scissors') {
         const scissorsSymbol = document.createElement('img');
+        scissorsSymbol.className = "resultSymbol";
         scissorsSymbol.src = "scissors.png";
         scissorsSymbol.style.width = '6rem';
         scissorsSymbol.style.position = 'absolute';
@@ -90,9 +99,12 @@ function showUserChoice(choice) {
 
 function showComputerChoice(choice) {
     const container = document.querySelector('#container');
+    const oldSymbol = container.querySelector(".resultSymbolComputer");
+    oldSymbol && oldSymbol.remove();
 
     if (choice == 'rock') {
         const rockSymbol = document.createElement('img');
+        rockSymbol.className = "resultSymbolComputer";
         rockSymbol.src = "rock.png";
         rockSymbol.style.width = '6rem';
         rockSymbol.style.position = 'absolute';
@@ -103,6 +115,7 @@ function showComputerChoice(choice) {
         container.append(rockSymbol);
     } else if (choice == 'paper') {
         const paperSymbol = document.createElement('img');
+        paperSymbol.className = "resultSymbolComputer";
         paperSymbol.src = "paper.png";
         paperSymbol.style.width = '6rem';
         paperSymbol.style.position = 'absolute';
@@ -113,6 +126,7 @@ function showComputerChoice(choice) {
         container.append(paperSymbol);
     } else if (choice == 'scissors') {
         const scissorsSymbol = document.createElement('img');
+        scissorsSymbol.className = "resultSymbolComputer";
         scissorsSymbol.src = "scissors.png";
         scissorsSymbol.style.width = '6rem';
         scissorsSymbol.style.position = 'absolute';
@@ -129,20 +143,11 @@ const computerButtons = Array.from(document.querySelectorAll('.computer-button')
 
 userButtons.forEach(userButton => {
     userButton.addEventListener('click', e => {
-        // Failed solution nº1
-        // para.remove();
-        // rockSymbol.remove();
-        // paperSymbol.remove();
-        // scissorsSymbol.remove();
-
-        // Failed solution nº2
-        // window.location.reload();
-        
         let result = playRound(userButton.dataset.choice);
         showResult(result[0]);
         showUserChoice(userButton.dataset.choice);
         showComputerChoice(result[1]);
-    })
+    });
 });
 
 
