@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- <meta http-equiv="refresh" content="1"> -->
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
@@ -13,29 +14,29 @@
         <h1 id="title">Rock Paper Scissors</h1>
         <p class="player-name">Computer</p>
         <div id="computer-buttons">
-            <button class="computer-button" class="scissors">
+            <button class="computer-button" data-choice="scissors" disabled>
                 <img src="scissors.png" alt="scissors symbol"
                     class="computer-button-symbol">
             </button>
-            <button class="computer-button" class="paper">
+            <button class="computer-button" data-choice="paper" disabled>
                 <img src="paper.png" alt="paper symbol"
                     class="computer-button-symbol">
             </button>
-            <button class="computer-button" class="rock">
+            <button class="computer-button" data-choice="rock" disabled>
                 <img src="rock.png" alt="rock symbol"
                     class="computer-button-symbol">
             </button>
         </div>
         <div id="user-buttons">
-            <button class="user-button" class="rock">
+            <button class="user-button" data-choice="rock">
                 <img src="rock.png" alt="rock symbol"
                     class="user-button-symbol">
             </button>
-            <button class="user-button" class="paper">
+            <button class="user-button" data-choice="paper">
                 <img src="paper.png" alt="paper symbol"
                     class="user-button-symbol">
             </button>
-            <button class="user-button" class="scissors">
+            <button class="user-button" data-choice="scissors">
                 <img src="scissors.png" alt="scissors symbol"
                     class="user-button-symbol">
             </button>
@@ -44,5 +45,7 @@
         <script src="main.js"></script>
     </div>
 </body>
+
+
 
 </html>
