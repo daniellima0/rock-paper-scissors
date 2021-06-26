@@ -75,7 +75,7 @@ function showUserChoice(choice) {
     if (choice == 'Rock') {
         const rockSymbol = document.createElement('img');
         rockSymbol.className = "resultSymbol";
-        rockSymbol.src = "Rock.png";
+        rockSymbol.src = "rock.png";
         rockSymbol.style.width = '6rem';
         rockSymbol.style.position = 'absolute';
         rockSymbol.style.top = '33rem';
@@ -116,7 +116,7 @@ function showComputerChoice(choice) {
     if (choice == 'Rock') {
         const rockSymbol = document.createElement('img');
         rockSymbol.className = "resultSymbolComputer";
-        rockSymbol.src = "Rock.png";
+        rockSymbol.src = "rock.png";
         rockSymbol.style.width = '6rem';
         rockSymbol.style.position = 'absolute';
         rockSymbol.style.top = '19.5rem';
