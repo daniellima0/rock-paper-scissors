@@ -75,7 +75,7 @@ function showUserChoice(choice) {
     if (choice == 'Rock') {
         const rockSymbol = document.createElement('img');
         rockSymbol.className = "resultSymbol";
-        rockSymbol.src = "rock.png";
+        rockSymbol.src = "./images/rock.png";
         rockSymbol.style.width = '6rem';
         rockSymbol.style.position = 'absolute';
         rockSymbol.style.top = '33rem';
@@ -86,7 +86,7 @@ function showUserChoice(choice) {
     } else if (choice == 'Paper') {
         const paperSymbol = document.createElement('img');
         paperSymbol.className = "resultSymbol";
-        paperSymbol.src = "paper.png";
+        paperSymbol.src = "./images/paper.png";
         paperSymbol.style.width = '6rem';
         paperSymbol.style.position = 'absolute';
         paperSymbol.style.top = '33rem';
@@ -97,7 +97,7 @@ function showUserChoice(choice) {
     } else if (choice == 'Scissors') {
         const scissorsSymbol = document.createElement('img');
         scissorsSymbol.className = "resultSymbol";
-        scissorsSymbol.src = "scissors.png";
+        scissorsSymbol.src = "./images/scissors.png";
         scissorsSymbol.style.width = '6rem';
         scissorsSymbol.style.position = 'absolute';
         scissorsSymbol.style.top = '33rem';
@@ -116,7 +116,7 @@ function showComputerChoice(choice) {
     if (choice == 'Rock') {
         const rockSymbol = document.createElement('img');
         rockSymbol.className = "resultSymbolComputer";
-        rockSymbol.src = "rock.png";
+        rockSymbol.src = "./images/rock.png";
         rockSymbol.style.width = '6rem';
         rockSymbol.style.position = 'absolute';
         rockSymbol.style.top = '19.5rem';
@@ -128,7 +128,7 @@ function showComputerChoice(choice) {
     } else if (choice == 'Paper') {
         const paperSymbol = document.createElement('img');
         paperSymbol.className = "resultSymbolComputer";
-        paperSymbol.src = "paper.png";
+        paperSymbol.src = "./images/paper.png";
         paperSymbol.style.width = '6rem';
         paperSymbol.style.position = 'absolute';
         paperSymbol.style.top = '19.5rem';
@@ -140,7 +140,7 @@ function showComputerChoice(choice) {
     } else if (choice == 'Scissors') {
         const scissorsSymbol = document.createElement('img');
         scissorsSymbol.className = "resultSymbolComputer";
-        scissorsSymbol.src = "scissors.png";
+        scissorsSymbol.src = "./images/scissors.png";
         scissorsSymbol.style.width = '6rem';
         scissorsSymbol.style.position = 'absolute';
         scissorsSymbol.style.top = '19.5rem';
