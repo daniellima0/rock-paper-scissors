@@ -45,7 +45,7 @@ function showResult(resultArray, resultType) {
     const paragraph = document.createElement('p');
     paragraph.id = "resultParagraph";
     paragraph.textContent = resultArray;
-    paragraph.style.fontSize = '1.8rem';
+    paragraph.style.fontSize = '1.6rem';
     paragraph.style.textAlign = 'center';
     paragraph.style.position = 'absolute';
     paragraph.style.top = '54%';
@@ -68,7 +68,6 @@ function showResult(resultArray, resultType) {
 function showUserChoice(choice) {
 
     const container = document.querySelector('#container');
-    // Why querySelectorAll doesn't work?
     const oldSymbol = container.querySelector(".resultSymbol");
     oldSymbol && oldSymbol.remove();
 
@@ -76,10 +75,10 @@ function showUserChoice(choice) {
         const rockSymbol = document.createElement('img');
         rockSymbol.className = "resultSymbol";
         rockSymbol.src = "./images/rock.png";
-        rockSymbol.style.width = '6rem';
+        rockSymbol.style.width = '4.5rem';
         rockSymbol.style.position = 'absolute';
-        rockSymbol.style.top = '33rem';
-        rockSymbol.style.left = '11.8rem';
+        rockSymbol.style.top = '29rem';
+        rockSymbol.style.left = '11.4rem';
         rockSymbol.style.margin = 'auto';
         container.append(rockSymbol);
         return rockSymbol;
@@ -87,10 +86,10 @@ function showUserChoice(choice) {
         const paperSymbol = document.createElement('img');
         paperSymbol.className = "resultSymbol";
         paperSymbol.src = "./images/paper.png";
-        paperSymbol.style.width = '6rem';
+        paperSymbol.style.width = '4.5rem';
         paperSymbol.style.position = 'absolute';
-        paperSymbol.style.top = '33rem';
-        paperSymbol.style.left = '11.8rem';
+        paperSymbol.style.top = '29rem';
+        paperSymbol.style.left = '11rem';
         paperSymbol.style.margin = 'auto';
         container.append(paperSymbol);
         return paperSymbol;
@@ -98,10 +97,10 @@ function showUserChoice(choice) {
         const scissorsSymbol = document.createElement('img');
         scissorsSymbol.className = "resultSymbol";
         scissorsSymbol.src = "./images/scissors.png";
-        scissorsSymbol.style.width = '6rem';
+        scissorsSymbol.style.width = '4.5rem';
         scissorsSymbol.style.position = 'absolute';
-        scissorsSymbol.style.top = '33rem';
-        scissorsSymbol.style.left = '11.8rem';
+        scissorsSymbol.style.top = '29rem';
+        scissorsSymbol.style.left = '11.4rem';
         scissorsSymbol.style.margin = 'auto';
         container.append(scissorsSymbol);
         return scissorsSymbol;
@@ -117,10 +116,10 @@ function showComputerChoice(choice) {
         const rockSymbol = document.createElement('img');
         rockSymbol.className = "resultSymbolComputer";
         rockSymbol.src = "./images/rock.png";
-        rockSymbol.style.width = '6rem';
+        rockSymbol.style.width = '4.5rem';
         rockSymbol.style.position = 'absolute';
-        rockSymbol.style.top = '19.5rem';
-        rockSymbol.style.left = '11.8rem';
+        rockSymbol.style.top = '18rem';
+        rockSymbol.style.left = '11rem';
         rockSymbol.style.margin = 'auto';
         rockSymbol.style.transform = 'rotate(180deg)';
         container.append(rockSymbol);
@@ -129,10 +128,10 @@ function showComputerChoice(choice) {
         const paperSymbol = document.createElement('img');
         paperSymbol.className = "resultSymbolComputer";
         paperSymbol.src = "./images/paper.png";
-        paperSymbol.style.width = '6rem';
+        paperSymbol.style.width = '4.5rem';
         paperSymbol.style.position = 'absolute';
-        paperSymbol.style.top = '19.5rem';
-        paperSymbol.style.left = '11.8rem';
+        paperSymbol.style.top = '18rem';
+        paperSymbol.style.left = '11rem';
         paperSymbol.style.margin = 'auto';
         paperSymbol.style.transform = 'rotate(180deg)';
         container.append(paperSymbol);
@@ -141,10 +140,10 @@ function showComputerChoice(choice) {
         const scissorsSymbol = document.createElement('img');
         scissorsSymbol.className = "resultSymbolComputer";
         scissorsSymbol.src = "./images/scissors.png";
-        scissorsSymbol.style.width = '6rem';
+        scissorsSymbol.style.width = '4.5rem';
         scissorsSymbol.style.position = 'absolute';
-        scissorsSymbol.style.top = '19.5rem';
-        scissorsSymbol.style.left = '11.8rem';
+        scissorsSymbol.style.top = '18rem';
+        scissorsSymbol.style.left = '11rem';
         scissorsSymbol.style.margin = 'auto';
         scissorsSymbol.style.transform = 'rotate(180deg)';
         container.append(scissorsSymbol);
@@ -269,18 +268,3 @@ userButtons.forEach(userButton => {
         endGame(resultParagraph, resultUserSymbol, resultComputerSymbol, resultArray[2]);
     });
 });
-
-
-
-// How the game must work:
-//
-// When the user clicks on a button, the symbol of that button is showed on the top of the pressed button
-// in the same time that a random button of the computer is clicked and is showed below its pressed button.
-// Thus, the game must highlight the winner of the round in some way (maybe coloring the resultArray text to green, red or blue).
-// The screen must be highlighted in that way until the user clicks a button again.
-//
-// Step 1 - Create event listener to all user buttons ✅
-// Step 2 - Find some way to output a value from the button to input in the funcion playRound ✅
-// Step 3 - ...
-
-//add a box counter on the right side of both opponents and display counterLose and CounterWin

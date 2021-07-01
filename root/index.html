@@ -3,49 +3,69 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta http-equiv="refresh" content="1"> -->
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/reset.css">
+    <script src="https://kit.fontawesome.com/b6760ea8bc.js"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="container">
-        <h1 id="title">Rock Paper Scissors</h1>
-        <p class="player-name">Computer</p>
-        <div id="computer-buttons">
-            <button class="computer-button" disabled>
-                <img src="./images/scissors.png" alt="scissors symbol"
-                    class="computer-button-symbol">
-            </button>
-            <button class="computer-button" disabled>
-                <img src="./images/paper.png" alt="paper symbol"
-                    class="computer-button-symbol">
-            </button>
-            <button class="computer-button" disabled>
-                <img src="./images/rock.png" alt="rock symbol"
-                    class="computer-button-symbol">
-            </button>
+    <main>
+        <div id="container">
+            <h1 id="title">Rock Paper Scissors</h1>
+            <p class="player-name">Computer</p>
+            <div id="computer-buttons">
+                <button class="computer-button" disabled>
+                    <img src="./images/scissors.png" alt="scissors symbol"
+                        class="computer-button-symbol">
+                </button>
+                <button class="computer-button" disabled>
+                    <img src="./images/paper.png" alt="paper symbol"
+                        class="computer-button-symbol">
+                </button>
+                <button class="computer-button" disabled>
+                    <img src="./images/rock.png" alt="rock symbol"
+                        class="computer-button-symbol">
+                </button>
+            </div>
+            <div id="user-buttons">
+                <button class="user-button" data-choice="Rock">
+                    <img src="./images/rock.png" alt="rock symbol"
+                        class="user-button-symbol">
+                </button>
+                <button class="user-button" data-choice="Paper">
+                    <img src="./images/paper.png" alt="paper symbol"
+                        class="user-button-symbol">
+                </button>
+                <button class="user-button" data-choice="Scissors">
+                    <img src="./images/scissors.png" alt="scissors symbol"
+                        class="user-button-symbol">
+                </button>
+            </div>
+            <p class="player-name">You</p>
+            <script src="./scripts/main.js"></script>
         </div>
-        <div id="user-buttons">
-            <button class="user-button" data-choice="Rock">
-                <img src="./images/rock.png" alt="rock symbol"
-                    class="user-button-symbol">
-            </button>
-            <button class="user-button" data-choice="Paper">
-                <img src="./images/paper.png" alt="paper symbol"
-                    class="user-button-symbol">
-            </button>
-            <button class="user-button" data-choice="Scissors">
-                <img src="./images/scissors.png" alt="scissors symbol"
-                    class="user-button-symbol">
-            </button>
+
+        <div id="project-info">
+            <p>This project is part of <a href='https://www.theodinproject.com/'
+                    target="_blank"> The Odin Project</a> </p>
         </div>
-        <p class="player-name">You</p>
-        <script src="./scripts/main.js"></script>
-    </div>
+    </main>
+
+    <footer id="footer">
+        <div id="my-info">
+            <p id="my-info-title">Contact Me</p>
+            <a href="mailto:danielmlima@protonmail.com"
+                id="email">danielmlima@protonmail.com</a>
+            <div id="icons">
+                <a href="https://github.com/daniellima0" target="_blank"><i
+                        class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/danielmlima/"
+                    target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
-
-
 
 </html>
