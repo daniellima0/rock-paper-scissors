@@ -3,7 +3,7 @@
 ## Introduction
 
 This is a Web version of the famous game Rock Paper Scissors,  
-built with plain HTML, CSS and Javascript.
+built with plain HTML, CSS and Javascript and is part of [The Odin Project](https://www.theodinproject.com/).
 
 ## Visualize WebPage
 
