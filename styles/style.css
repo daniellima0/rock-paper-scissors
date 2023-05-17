@@ -90,9 +90,8 @@ body {
 }
 
 #footer {
-    position: absolute;
-    bottom: 0;
-    margin: auto;
+    margin-top: 6rem;
+    display: flex;
     background-color: rgba(242, 242, 242, 1);
     width: 100%;
     height: 8rem;
@@ -103,11 +102,6 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 0.8rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     margin: auto;
     width: max-content;
     height: max-content;
